@@ -11,6 +11,6 @@ import java.io.IOException;
 public class controller {
     @GetMapping("/message")
     public String test() throws IOException, InterruptedException {
-        return "First Test Message";
+        return "First Test Message - UPDATED";
     }
 }
