@@ -42,7 +42,11 @@ public class ProductMasterDataImpl {
 
     public Boolean insertProductMasterData(List<ProductMasterDataDAO> ProductMasterDataDAOList) throws JsonProcessingException, InterruptedException {
 
-        System.setProperty("webdriver.gecko.driver", "src/main/java/com/basha/uk/uk/driver/geckodriver.exe");
+//        System.setProperty("webdriver.gecko.driver", "src/main/java/com/basha/uk/uk/driver/geckodriver.exe");
+        String geckoDriverPath = getClass().getClassLoader().getResource("drivers/geckodriver").getPath();
+
+        // Set the path to GeckoDriver
+        System.setProperty("webdriver.gecko.driver", geckoDriverPath);
 
 
         Integer tagMaxNo;
